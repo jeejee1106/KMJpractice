@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+       
+<tiles-definitions>
+	<!-- 메인 타일 -->
+	<definition name="layout1" template="/WEB-INF/layout/layout1.jsp">
+		<put-attribute name="header" value="/WEB-INF/layout/header.jsp"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/layout/menu.jsp"></put-attribute>
+		<put-attribute name="main" value="/WEB-INF/layout/main.jsp"></put-attribute>
+		<put-attribute name="footer" value="/WEB-INF/layout/footer.jsp"></put-attribute>
+	</definition>
+	<!-- wild card -->
+	<definition name="/*/*" extends="layout1">
+		<put-attribute name="main" value="/WEB-INF/{1}/{2}.jsp"></put-attribute>
+	</definition>
+	
+	<!-- 프로젝트 디테일 타일 -->
+	<definition name="main" template="/WEB-INF/layout/main.jsp">
+		<put-attribute name="promain" value="/WEB-INF/project/projectMain.jsp"></put-attribute>
+		<put-attribute name="sub" value="/WEB-INF/project/projectPlan.jsp"></put-attribute>
+		<put-attribute name="gift" value="/WEB-INF/project/gift.jsp"></put-attribute>
+	</definition>
+	<!-- wild card -->
+	<definition name="/*/*" extends="main">
+		<put-attribute name="sub" value="/WEB-INF/{1}/{2}.jsp"></put-attribute>
+	</definition>
+	
+	
+</tiles-definitions>
