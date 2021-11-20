@@ -2007,15 +2007,6 @@ textarea.input {
   margin-top:100px;
 }
 
-/* 임시 */
-.project-main{
-	display:inline-block;
-}
-
-.project-sub-aside{
-	display:inline-block;
-}
-
 #bottom-footer {
   background: #1E1F29;
 }

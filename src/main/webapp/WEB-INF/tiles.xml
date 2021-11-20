@@ -16,16 +16,4 @@
 		<put-attribute name="main" value="/WEB-INF/{1}/{2}.jsp"></put-attribute>
 	</definition>
 	
-	<!-- 프로젝트 디테일 타일 -->
-	<definition name="main" template="/WEB-INF/layout/main.jsp">
-		<put-attribute name="promain" value="/WEB-INF/project/projectMain.jsp"></put-attribute>
-		<put-attribute name="sub" value="/WEB-INF/project/projectPlan.jsp"></put-attribute>
-		<put-attribute name="gift" value="/WEB-INF/project/gift.jsp"></put-attribute>
-	</definition>
-	<!-- wild card -->
-	<definition name="/*/*" extends="main">
-		<put-attribute name="sub" value="/WEB-INF/{1}/{2}.jsp"></put-attribute>
-	</definition>
-	
-	
 </tiles-definitions>
